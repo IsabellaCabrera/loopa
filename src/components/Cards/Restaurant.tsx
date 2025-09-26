@@ -1,7 +1,4 @@
-interface RestaurantCardProps {
-  img: string;
-  restaurant: string;
-}
+import type { RestaurantCardProps } from "../../types/cards";
 
 export const RestaurantCard = ({ img, restaurant }: RestaurantCardProps) => {
   return (

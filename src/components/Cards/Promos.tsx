@@ -1,9 +1,5 @@
-interface PromoCardProps {
-  restuarant: string;
-  img: string;
-  restaurantAvatar: string;
-  promo: number;
-}
+import type { PromoCardProps } from "../../types/cards";
+
 
 export const PromosCard = ({
   restuarant,

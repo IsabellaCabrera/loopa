@@ -1,8 +1,5 @@
-interface LoopaCardProps {
-  img: string;
-  title: string;
-  description: string;
-}
+import type { LoopaCardProps } from "../../types/cards";
+
 
 export const LoopaCard = ({ img, title, description }: LoopaCardProps) => {
   return (

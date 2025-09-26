@@ -1,10 +1,7 @@
 import { SearchIcon } from "../icons/SearchIcons";
+import type { InputProps } from "../types/input";
 
-interface InputProps {
-  type: "text" | "password" | "number" | "search";
-  name: string;
-  placeholder: string;
-}
+
 
 export const Input = ({ type, name, placeholder }: InputProps) => {
   return (

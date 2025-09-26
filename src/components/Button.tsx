@@ -1,9 +1,5 @@
-import type React from "react";
+import type { ButtonProps } from "../types/button";
 
-interface ButtonProps {
-  secondary?: boolean;
-  children: React.ReactNode;
-}
 
 export const Button = ({ children, secondary }: ButtonProps) => {
   const secondaryStyle = "border border-primary";

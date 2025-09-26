@@ -1,9 +1,7 @@
 import { LoopaCard } from "../components/Cards/Loopa";
 import { PromosCard } from "../components/Cards/Promos";
 import { RestaurantCard } from "../components/Cards/Restaurant";
-import { Footer } from "../components/Footer";
 import { OrderNowForm } from "../components/Forms/OrderNow";
-import { NavBar } from "../components/Header/NavBar";
 
 const loopaInfo = [
   {
@@ -74,7 +72,6 @@ const restaurant = [
 export const Landing = () => {
   return (
     <>
-      <NavBar />
       <section className="h-[440px] bg-[url(/heroimg.webp)] bg-center bg-cover bg-no-repeat" />
       <section className="py-9 px-12 ">
         <h2 className="font-bold text-xl">What Can you find in Loopa</h2>
@@ -117,7 +114,6 @@ export const Landing = () => {
       <section className="m-9 h-[500px] rounded-2xl flex items-center justify-center bg-secondary">
         <p className="font-medium">Map Soon</p>
       </section>
-      <Footer />
     </>
   );
 };
