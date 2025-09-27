@@ -3,6 +3,7 @@ import { Landing } from "./pages/Landing";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
 import { Footer } from "./components/Footer";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/seller/settings" />
 
           {/* Customer */}
-          <Route path="/customer/home" />
+          <Route path="/customer/home" element={<Home />} />
           <Route path="/customer/:restaurant" />
           <Route path="/customer/:order/checkout" />
           <Route path="/customer/:order/confirmation" />
