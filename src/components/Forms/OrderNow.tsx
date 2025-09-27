@@ -6,7 +6,7 @@ export const OrderNowForm = () => {
   return (
     <form className=" sm:w-1/2 flex flex-col gap-3">
       <h2 className="text-white text-xl mb-3">Order Now!</h2>
-      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-end gap-3">
         <Input
           type="search"
           name="orderNow"

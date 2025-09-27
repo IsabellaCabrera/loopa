@@ -2,14 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import { Landing } from "./pages/Landing";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
-import { NavBar } from "./components/Header/NavBar";
 import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <>
       <Router>
-        <NavBar />
         <Routes>
           <Route path="" element={<Landing />} />
           <Route path="/login" element={<Login />} />

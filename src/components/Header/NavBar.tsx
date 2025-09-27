@@ -7,7 +7,7 @@ export const NavBar = () => {
   const [page] = useState<"landing" | "user">("landing");
   return (
     <header className="flex items-center justify-between px-10 py-3 bg-secondary">
-      <Link to={""}>
+      <Link to={"/"}>
         <img src="/loopalogo.svg" alt="Loopa Logo" />
       </Link>
       <nav>
