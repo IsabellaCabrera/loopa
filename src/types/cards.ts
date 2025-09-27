@@ -15,3 +15,9 @@ export type RestaurantCardProps = {
   img: string;
   restaurant: string;
 }
+
+export type InformativeCardProps = {
+  logo: string;
+  text: string;
+  background: string;
+};
