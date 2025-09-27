@@ -1,7 +1,6 @@
 import { LoopaCard } from "../components/Cards/Loopa";
 import { PromosCard } from "../components/Cards/Promos";
 import { RestaurantCard } from "../components/Cards/Restaurant";
-import { Footer } from "../components/Footer";
 import { OrderNowForm } from "../components/Forms/OrderNow";
 import { NavBar } from "../components/Header/NavBar";
 
@@ -117,7 +116,6 @@ export const Landing = () => {
       <section className="m-9 h-[500px] rounded-2xl flex items-center justify-center bg-secondary">
         <p className="font-medium">Map Soon</p>
       </section>
-      <Footer />
     </>
   );
 };
