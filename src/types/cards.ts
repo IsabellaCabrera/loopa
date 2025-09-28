@@ -1,5 +1,6 @@
 import type { ComponentProps } from "react";
 import { Rating } from "../components/Rating";
+import { Add } from "../components/Add";
 
 export type LoopaCardProps = {
   img: string;
@@ -33,3 +34,14 @@ export type RestaurantNearYouCardProps = {
   price: string;
   save: string;
 };
+
+export interface ShoppingCardProps {
+  id: string | number;
+  image: string;
+  title: string;
+  description: string;
+  add: ComponentProps<typeof Add>;
+  price: number | string;
+  delete: (id: string | number) => void;
+}
+
