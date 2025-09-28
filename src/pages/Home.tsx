@@ -8,7 +8,7 @@ import { Checkbox } from "../components/Checkbox";
 import { RestaurantNearYou } from "../components/Cards/RestaurantNearYou";
 
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { Button } from '../components/Button';
+import { Button } from "../components/Button";
 
 const restaurant = [
   {
@@ -104,10 +104,37 @@ const restaurantNewYouInfo = [
   },
   {
     id: crypto.randomUUID(),
-    img: "/public/qbanologo.webp",
-    restaurantimg: "/public/qbanorestaurant.webp",
-    restaurant: "Sandwich Qbano",
-    rating: 4.6,
+    img: "/public/mclogo.webp",
+    restaurantimg: "/public/mcdonaldsrestaurant.webp",
+    restaurant: "McDonalds",
+    rating: 4.5,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/kfclogo.webp",
+    restaurantimg: "/public/kfcrestaurant.webp",
+    restaurant: "KFC",
+    rating: 4.0,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/elcorrallogo.webp",
+    restaurantimg: "/public/elcorralrestaurant.webp",
+    restaurant: "El Corral",
+    rating: 4.8,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/frisbylogo.webp",
+    restaurantimg: "/public/frisbyrestaurant.webp",
+    restaurant: "Frisby",
+    rating: 4.3,
     price: "$6.99",
     save: "$6",
   },
@@ -178,7 +205,7 @@ export const Home = () => {
         <h2 className="font-bold text-4xl text-[#4741A6] pb-9">
           Restaurants near you!
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-3">
           {restaurantNewYouInfo.map(
             ({ id, img, restaurantimg, restaurant, rating, price, save }) => (
               <RestaurantNearYou
