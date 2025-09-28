@@ -2,13 +2,13 @@ import { Link } from "react-router";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
-export const LoginForm = () => {
+export const RegisterCustomer = () => {
   return (
     <form className="flex flex-col gap-6 ">
       <Link to={"/"}> <img src="/PeraLogo-amarillo.svg" alt="Pera logo"/></Link>
       <div>
-        <h2 className=" text-4xl font-bold text-morado">Welcome Back</h2>
-        <p>We were waiting for you</p>
+        <h2 className=" text-4xl font-bold text-morado">Create an account!</h2>
+        <p>Start exploring a new world of possibilities with incredible offers while taking care of our planet.</p>
       </div>
       <span className="h-[1px] bg-morado/20"> </span>
       <div className=" flex flex-col gap-4">

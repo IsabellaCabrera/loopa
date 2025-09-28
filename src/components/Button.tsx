@@ -1,9 +1,9 @@
 import type { ButtonProps } from "../types/button";
 
 export const Button = ({ disabled, children, secondary }: ButtonProps) => {
-  const primaryStyle = "bg-primary text-white hover:opacity-90";
+  const primaryStyle = "bg-morado text-white hover:opacity-90";
   const secondaryStyle =
-    "border border-primary text-primary hover:bg-primary hover:text-white";
+    "border border-morado text-morado hover:bg-morado hover:text-white";
   const disabledStyle = "bg-neutral-500 text-white cursor-default opacity-60";
 
   return (

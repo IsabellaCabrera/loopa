@@ -37,7 +37,6 @@ function App() {
           <Route path="/customer/history&savings" />
           <Route path="/customer/settings" />
         </Routes>
-        <Footer />
       </Router>
     </>
   );
