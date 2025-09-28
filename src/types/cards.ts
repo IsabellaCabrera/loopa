@@ -13,5 +13,11 @@ export type PromoCardProps = {
 
 export type RestaurantCardProps = {
   img: string;
-  restaurant: string;
+  restaurant: string | null
 }
+
+export type RestaurantInfoCardProps = {
+  foodWastSaved: number;
+  deliveryTime: number;
+  rating: number;
+};

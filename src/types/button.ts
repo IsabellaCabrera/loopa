@@ -5,3 +5,11 @@ export type ButtonProps = {
   children: React.ReactNode;
   disabled?: boolean;
 };
+
+export type CheckboxProps = {
+  id: string;
+  label: string;
+  checked: boolean;
+  img?: string;
+  onChange: (checked: boolean) => void;
+};
