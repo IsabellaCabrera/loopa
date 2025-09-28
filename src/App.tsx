@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import { Landing } from "./pages/Landing";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
-import { Footer } from "./components/Footer";
 import { SignUpCustomer } from "./pages/SignupCustomer";
 import { SignUpSeller } from "./pages/SignupSeller";
+import { Restaurante } from "./pages/Restaurante";
+
+ 
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function App() {
 
           <Route path="/signup/customer" element={<SignUpCustomer />} />
           <Route path="/customer/home" />
-          <Route path="/customer/:restaurant" />
+          <Route path="/customer/:restaurant" element={<Restaurante/>}/>
           <Route path="/customer/:order/checkout" />
           <Route path="/customer/:order/confirmation" />
           <Route path="/customer/:order/pickup" />
