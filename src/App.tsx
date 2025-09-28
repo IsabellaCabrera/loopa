@@ -5,8 +5,7 @@ import { SignUp } from "./pages/Signup";
 import { SignUpCustomer } from "./pages/SignupCustomer";
 import { SignUpSeller } from "./pages/SignupSeller";
 import { Restaurante } from "./pages/Restaurante";
-
- 
+import { Pickup } from "./pages/Pickup";
 
 function App() {
   return (
@@ -32,10 +31,10 @@ function App() {
 
           <Route path="/signup/customer" element={<SignUpCustomer />} />
           <Route path="/customer/home" />
-          <Route path="/customer/:restaurant" element={<Restaurante/>}/>
+          <Route path="/customer/:restaurant" element={<Restaurante />} />
           <Route path="/customer/:order/checkout" />
           <Route path="/customer/:order/confirmation" />
-          <Route path="/customer/:order/pickup" />
+          <Route path="/customer/:order/pickup" element={<Pickup />} />
           <Route path="/customer/history&savings" />
           <Route path="/customer/settings" />
         </Routes>
