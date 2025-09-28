@@ -4,6 +4,7 @@ import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
+import { Checkout } from './pages/Checkout';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           {/* Customer */}
           <Route path="/customer/home" element={<Home />} />
           <Route path="/customer/:restaurant" />
-          <Route path="/customer/:order/checkout" />
+          <Route path="/customer/:order/checkout" element={<Checkout />} />
           <Route path="/customer/:order/confirmation" />
           <Route path="/customer/:order/pickup" />
           <Route path="/customer/history&savings" />
