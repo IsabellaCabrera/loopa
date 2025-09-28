@@ -5,7 +5,10 @@ import { RestaurantCard } from "../components/Cards/Restaurant";
 import { InformativeCard } from "../components/Cards/Informative";
 import { Input } from "../components/Input";
 import { Checkbox } from "../components/Checkbox";
+import { RestaurantNearYou } from "../components/Cards/RestaurantNearYou";
+
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { Button } from '../components/Button';
 
 const restaurant = [
   {
@@ -62,6 +65,54 @@ const checkboxOptions = [
   { id: "kebab", label: "Kebab", img: "/public/kebab.svg" },
 ];
 
+const restaurantNewYouInfo = [
+  {
+    id: crypto.randomUUID(),
+    img: "/public/mclogo.webp",
+    restaurantimg: "/public/mcdonaldsrestaurant.webp",
+    restaurant: "McDonalds",
+    rating: 4.5,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/kfclogo.webp",
+    restaurantimg: "/public/kfcrestaurant.webp",
+    restaurant: "KFC",
+    rating: 4.0,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/elcorrallogo.webp",
+    restaurantimg: "/public/elcorralrestaurant.webp",
+    restaurant: "El Corral",
+    rating: 4.8,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/frisbylogo.webp",
+    restaurantimg: "/public/frisbyrestaurant.webp",
+    restaurant: "Frisby",
+    rating: 4.3,
+    price: "$6.99",
+    save: "$6",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/public/qbanologo.webp",
+    restaurantimg: "/public/qbanorestaurant.webp",
+    restaurant: "Sandwich Qbano",
+    rating: 4.6,
+    price: "$6.99",
+    save: "$6",
+  },
+];
+
 export const Home = () => {
   const [selected, setSelected] = useState<string[]>([]);
 
@@ -114,13 +165,37 @@ export const Home = () => {
       {/* RestaurantCard */}
       <section className="py-9 px-12 bg-black rounded-tl-3xl rounded-br-3xl relative">
         <h2 className="font-bold text-xl text-white">Top picks</h2>
-        <section className="grid grid-flow-col gap-4 mt-3 overflow-x-auto scrollbar-hide">
+        <div className="grid grid-flow-col gap-4 mt-3 overflow-x-auto scrollbar-hide">
           {restaurant.map(({ id, img, restaurant }) => (
             <RestaurantCard key={id} img={img} restaurant={restaurant} />
           ))}
           <SlArrowLeft className="absolute top-1/2 left-4 -translate-y-1/2 text-white/30 cursor-pointer w-[32px] h-[32px]" />
           <SlArrowRight className="absolute top-1/2 right-4 -translate-y-1/2 text-white/30 cursor-pointer w-[32px] h-[32px]" />
-        </section>
+        </div>
+      </section>
+      {/* <RestaurantNearYouCard /> */}
+      <section className="py-9 px-12">
+        <h2 className="font-bold text-4xl text-[#4741A6] pb-9">
+          Restaurants near you!
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-3">
+          {restaurantNewYouInfo.map(
+            ({ id, img, restaurantimg, restaurant, rating, price, save }) => (
+              <RestaurantNearYou
+                key={id}
+                img={img}
+                restaurantimg={restaurantimg}
+                restaurant={restaurant}
+                ratingProps={{ value: rating }}
+                price={price}
+                save={save}
+              />
+            )
+          )}
+        </div>
+        <div className="flex justify-center mt-8">
+          <Button>See more restaurants</Button>
+        </div>
       </section>
     </>
   );
