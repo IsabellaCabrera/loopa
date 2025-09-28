@@ -1,0 +1,89 @@
+import type { SummaryProps } from "../../types/summary";
+import { RadioGroup } from "./InputsSummary/RadioGroup";
+
+export const Summary = ({
+  subtotal,
+  selectedDonation,
+  selectedPayment,
+  onDonationChange,
+  onPaymentChange,
+  onPay,
+}: SummaryProps) => {
+  const calculateTotal = () => {
+    let donationAmount = 0;
+
+    if (selectedDonation === "2") {
+      donationAmount = 200;
+    } else if (selectedDonation === "5") {
+      donationAmount = 500;
+    } else if (selectedDonation === "round") {
+      const rounded = Math.ceil(subtotal / 100) * 100;
+      donationAmount = rounded - subtotal;
+    }
+
+    return subtotal + donationAmount;
+  };
+
+  const formatPrice = (price: number): string => {
+    return `$${(price / 100).toLocaleString()}`;
+  };
+
+  const donationOptions = [
+    { value: "2", label: "$2" },
+    { value: "5", label: "$5" },
+    { value: "round", label: "Round up" },
+  ];
+
+  const paymentOptions = [
+    { value: "card", label: "Card" },
+    { value: "cash", label: "Cash" },
+  ];
+
+  return (
+    <aside className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm sticky top-4">
+      <h3 className="text-2xl font-bold text-[#4741A6] mb-6">Summary</h3>
+
+      {/* Subtotal */}
+      <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-100">
+        <span className="text-gray-600">Subtotal</span>
+        <span className="font-semibold text-lg">{formatPrice(subtotal)}</span>
+      </div>
+
+      {/* Donation Section - Ahora usando RadioGroup */}
+      <RadioGroup
+        title="Donation"
+        options={donationOptions}
+        selectedValue={selectedDonation}
+        onChange={onDonationChange}
+        name="donation"
+      />
+
+      {/* Payment Method - Ahora usando RadioGroup */}
+      <RadioGroup
+        title="Payment"
+        options={paymentOptions}
+        selectedValue={selectedPayment}
+        onChange={onPaymentChange}
+        name="payment"
+      />
+
+      {/* Total */}
+      <div className="border-t border-gray-200 pt-4 mb-6">
+        <div className="flex justify-between items-center">
+          <span className="text-xl font-bold text-[#4741A6]">Total</span>
+          <span className="text-xl font-bold">
+            {formatPrice(calculateTotal())}
+          </span>
+        </div>
+      </div>
+
+      {/* Pay Button */}
+      <button
+        onClick={onPay}
+        className="w-full bg-[#4741A6] text-white py-3 rounded-lg font-semibold text-lg hover:bg-[#3a3485] transition-colors"
+      >
+        Pay
+      </button>
+    </aside>
+  );
+};
