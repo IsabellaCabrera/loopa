@@ -3,20 +3,21 @@ import { Landing } from "./pages/Landing";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
 import { Footer } from "./components/Footer";
+import { SignUpCustomer } from "./pages/SignupCustomer";
+import { SignUpSeller } from "./pages/SignupSeller";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup/selectmode" />
-          <Route path="/signup/customer" element={<SignUp />} />
-          <Route path="/signup/seller" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp />} />
 
           {/* Seller */}
 
+          <Route path="/signup/seller" element={<SignUpSeller />} />
           <Route path="/seller/analytics" />
           <Route path="/seller/offer" />
           <Route path="/seller/offer/createoffer" />
@@ -26,6 +27,8 @@ function App() {
           <Route path="/seller/settings" />
 
           {/* Customer */}
+
+          <Route path="/signup/customer" element={<SignUpCustomer />} />
           <Route path="/customer/home" />
           <Route path="/customer/:restaurant" />
           <Route path="/customer/:order/checkout" />

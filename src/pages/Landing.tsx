@@ -74,7 +74,7 @@ export const Landing = () => {
   return (
     <>
       <NavBar />
-      <section className="h-[440px] bg-[url(/heroimg.webp)] bg-center bg-cover bg-no-repeat" />
+      <section className="h-[440px] bg-[url(/heroimg.webp)] bg-center bg-cover bg-no-repeat" /> 
       <section className="py-9 px-12 ">
         <h2 className="font-bold text-xl">What Can you find in Loopa</h2>
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-auto-fit gap-3 mt-3">

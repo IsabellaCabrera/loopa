@@ -31,3 +31,5 @@ export const LoginForm = () => {
     </form>
   );
 };
+ // en el boton uso el use navagte porque como no tiene navegacion propia porque no es una etiqueta link entonces traemos el ooh y le damos navegacion 
+ // eso es navegacion programatica

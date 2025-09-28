@@ -1,6 +1,6 @@
 import type { LoopaCardProps } from "../../types/cards";
 
-
+                          // espera recibi img, title etc
 export const LoopaCard = ({ img, title, description }: LoopaCardProps) => {
   return (
     <article className="flex flex-col gap-4">
