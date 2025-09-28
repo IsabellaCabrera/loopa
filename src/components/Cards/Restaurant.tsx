@@ -3,15 +3,15 @@ import type { RestaurantCardProps } from "../../types/cards";
 export const RestaurantCard = ({ img, restaurant }: RestaurantCardProps) => {
   return (
     <article>
-      <figure className="flex flex-col gap-2 items-center justify-center">
-        <div className="rounded-full w-32 h-32 overflow-hidden">
+      <figure className="flex flex-col gap-3 items-center justify-center">
+        <div className="rounded-full w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 overflow-hidden">
           <img 
             src={img} 
             alt={restaurant}
-            className="w-full h-full object-cover"
+            className="bg-white w-full h-full object-cover border-4 border-[#F9CE69] rounded-full"
           />
         </div>
-        <p className="text-primary font-medium">{restaurant}</p>
+        <p className="text-white font-normal text-base">{restaurant}</p>
       </figure>
     </article>
   );
