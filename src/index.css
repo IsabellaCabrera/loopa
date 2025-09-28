@@ -2,6 +2,9 @@
 
 @theme {
   /* Colors */
-  --color-primary : #4741A6;
- --color-secondary : #F9CE69 
+  --color-morado: #4741a6;
+  --color-amarillo: #f9ce69;
+  --color-tertiary: #cdcdcd;
+  --color-mainWhite: #FAF6F0;
+  --color-blue: #9BBBFC; 
 }
