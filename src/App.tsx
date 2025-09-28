@@ -26,7 +26,7 @@ function App() {
           <Route path="/seller/orderinfo/:order" />
           <Route path="/seller/settings" />
 
-          {/* Customer */}
+          {/* Customer es el usario que va comprar  */}
 
           <Route path="/signup/customer" element={<SignUpCustomer />} />
           <Route path="/customer/home" />
