@@ -16,8 +16,17 @@ export type RestaurantCardProps = {
   restaurant: string | null
 }
 
-export type RestaurantInfoCardProps = {
-  foodWastSaved: number;
-  deliveryTime: number;
-  rating: number;
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
