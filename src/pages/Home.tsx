@@ -84,19 +84,18 @@ export const Home = () => {
         />
       </section>
       {/* Checkbox */}
-<section className="mx-12 flex justify-between flex-wrap gap-2">
-  {checkboxOptions.map(({ id, label, img }) => (
-    <Checkbox
-      key={id}
-      id={id}
-      label={label}
-      img={img}
-      checked={selected.includes(id)}
-      onChange={(isChecked) => handleChange(id, isChecked)}
-    />
-  ))}
-</section>
-
+      <section className="mx-12 flex justify-between flex-wrap gap-2">
+        {checkboxOptions.map(({ id, label, img }) => (
+          <Checkbox
+            key={id}
+            id={id}
+            label={label}
+            img={img}
+            checked={selected.includes(id)}
+            onChange={(isChecked) => handleChange(id, isChecked)}
+          />
+        ))}
+      </section>
 
       {/* InformativeCard */}
       <section className="py-9 px-12">
