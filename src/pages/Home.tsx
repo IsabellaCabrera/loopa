@@ -189,11 +189,11 @@ export const Home = () => {
         </section>
       </section>
       {/* RestaurantCard */}
-      <section className="py-9 px-12 bg-black rounded-tl-3xl rounded-br-3xl relative">
+      <section className="py-10 px-24 h-fit bg-Darkgray500 my-14 rounded-tl-3xl rounded-br-3xl relative ">
         <h2 className="font-bold text-xl text-white">Top picks</h2>
-        <div className="grid grid-flow-col gap-4 mt-3 overflow-x-auto scrollbar-hide">
+        <div className="grid grid-flow-col gap-4 pt-2 mt-3 overflow-x-auto scrollbar-hide">
           {restaurant.map(({ id, img, restaurant }) => (
-            <RestaurantCard key={id} img={img} restaurant={restaurant} />
+            <RestaurantCard key={id} img={img} restaurant={restaurant} whiteVariant/>
           ))}
           <SlArrowLeft className="absolute top-1/2 left-4 -translate-y-1/2 text-white/30 cursor-pointer w-[32px] h-[32px]" />
           <SlArrowRight className="absolute top-1/2 right-4 -translate-y-1/2 text-white/30 cursor-pointer w-[32px] h-[32px]" />
