@@ -113,7 +113,7 @@ export const Landing = () => {
           ))}
         </section>
       </section>
-      <section className="m-9 h-[500px] rounded-2xl flex items-center justify-center bg-secondary">
+      <section className="m-9 h-[500px] rounded-2xl flex items-center justify-center bg-amarillo">
         <p className="font-medium">Map Soon</p>
       </section>
     </>
