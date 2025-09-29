@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Button } from "../components/Button";
 
 export const Pickup = () => {
@@ -23,11 +24,13 @@ export const Pickup = () => {
 
       <div className="flex-1 flex flex-col gap-16 md:pl-10 lg:pl-20">
         <div className="flex flex-col gap-6">
+          <Link to={"/customer/home"}>
           <img
             className="h-[134px] w-[134px]"
             src="/public/Pera-Blue.svg"
             alt="Pera Logo"
-          />
+            />
+            </Link>
           <h1 className="text-3xl font-bold text-morado ">
             Your order is ready for you!
           </h1>

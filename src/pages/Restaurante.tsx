@@ -1,5 +1,4 @@
 import { RestaurantCard } from "../components/Cards/Restaurant";
-import { Footer } from "../components/Footer";
 import { NavBar } from "../components/Header/NavBar";
 import { Rating } from "../components/Tags/Rating";
 import { Input } from "../components/Input";
@@ -117,7 +116,6 @@ export const Restaurante = () => {
           </aside>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

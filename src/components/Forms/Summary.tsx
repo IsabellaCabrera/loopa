@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router";
 import type { SummaryProps } from "../../types/summary";
 import { RadioGroup } from "../Inputs/RadioGroup";
+import { Button } from "../Button";
 
 export const Summary = ({
   subtotal,
@@ -9,6 +11,8 @@ export const Summary = ({
   onPaymentChange,
   onPay,
 }: SummaryProps) => {
+  const navigate = useNavigate();
+
   const calculateTotal = () => {
     let donationAmount = 0;
 
@@ -40,7 +44,7 @@ export const Summary = ({
   ];
 
   return (
-    <aside className="border border-gray-200 rounded-2xl p-6 sticky top-4">
+    <aside className="flex flex-col border border-gray-200 rounded-2xl p-6 sticky top-4">
       <h3 className="text-2xl font-bold text-morado mb-6">Summary</h3>
 
       {/* Subtotal */}
@@ -78,12 +82,14 @@ export const Summary = ({
       </div>
 
       {/* Pay Button */}
-      <button
-        onClick={onPay}
-        className="w-full bg-morado text-white py-3 rounded-lg font-semibold text-lg hover:bg-[#3a3485] transition-colors"
+      <Button
+        onClick={() => {
+          onPay();
+          navigate("/customer/order/pickup");
+        }}
       >
         Pay
-      </button>
+      </Button>
     </aside>
   );
 };
