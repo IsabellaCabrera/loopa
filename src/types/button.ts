@@ -4,6 +4,7 @@ export type ButtonProps = {
   secondary?: boolean;
   children: React.ReactNode;
   disabled?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 export type CheckboxProps = {

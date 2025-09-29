@@ -1,6 +1,11 @@
 import type { ButtonProps } from "../types/button";
 
-export const Button = ({ disabled, children, secondary }: ButtonProps) => {
+export const Button = ({
+  disabled,
+  children,
+  secondary,
+  onClick,
+}: ButtonProps) => {
   const primaryStyle = "bg-morado text-white hover:opacity-90";
   const secondaryStyle =
     "border border-morado text-morado hover:bg-morado hover:text-white";
@@ -8,6 +13,7 @@ export const Button = ({ disabled, children, secondary }: ButtonProps) => {
 
   return (
     <button
+      onClick={onClick}
       disabled={disabled}
       className={` cursor-pointer
         text-nowrap px-5 py-3 rounded-md transition
