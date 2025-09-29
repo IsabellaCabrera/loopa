@@ -103,7 +103,7 @@ export const Restaurante = () => {
                 />
               ))}
             </div>
-            <div className="py-6 grid grid-cols-1 lg:grid-cols-2 gap-y-12 md:gap-y-6 gap-x-6 md:gap-x-12 md:max-h-[700px] overflow-auto pr-2">
+            <div className="pb-6 grid grid-cols-1 lg:grid-cols-2 gap-y-12 md:gap-y-6 gap-x-6 md:gap-x-12 md:max-h-[700px] overflow-auto pr-2">
               <ProductCard />
               <ProductCard />
               <ProductCard />
