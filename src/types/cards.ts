@@ -17,7 +17,9 @@ export type PromoCardProps = {
 
 export type RestaurantCardProps = {
   img: string;
-  restaurant: string | null
+  restaurant: string | null;
+  whiteVariant?: boolean;
+
 }
 
 export type InformativeCardProps = {
