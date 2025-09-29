@@ -7,11 +7,7 @@ import { Checkbox } from "../components/Tags/Checkbox";
 import { FaRegClock } from "react-icons/fa";
 import { PiRecycleBold } from "react-icons/pi";
 import { useState } from "react";
-
-const restaurant = {
-  id: crypto.randomUUID(),
-  img: "RestaurantBanner.webp",
-};
+import { ProductCard } from "../components/Cards/Product";
 
 const checkboxOptions = [
   {
@@ -43,25 +39,22 @@ export const Restaurante = () => {
   return (
     <>
       <NavBar />
-      <main className=" px-14 relative  ">
-        <div className="absolute left-0 bg-azul w-1/2 h-full -z-10"></div>
-        <div className=" bg-[url(/RestaurantBanner.webp)] w-full h-[340px] bg-cover bg-center bg-no-repeat rounded-4xl"></div>
-        <div className=" absolute  transform -translate-x-1 translate-y-9">
-          <RestaurantCard
-            key={restaurant.id}
-            img={restaurant.img}
-            restaurant={null}
-          />
+      <main className="md:px-14 relative ">
+        <div className="hidden absolute left-0 bg-azul w-1/2 h-full -z-10 md:block"></div>
+        <div className=" bg-[url(/RestaurantBanner.webp)] w-full h-[340px] bg-cover bg-center bg-no-repeat rounded-b-4xl relative">
+          <div className=" absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 md:left-[18%] md:translate-x-0">
+            <RestaurantCard img="/mclogo.webp" restaurant={null} />
+          </div>
         </div>
 
-        <section className=" flex m-8 ">
-          <div>
-            <div className="m-8 ">
+        <section className=" flex flex-col md:flex-row gap-6  md:gap-10 lg:gap-12 justify-between mt-20 md:mt-14">
+          <aside className="w-full px-6">
+            <div className="md:pt-14">
               <h1 className="font-bold text-4xl ">McDonald’s – Pance</h1>
               <p> Avenida Cañas Gordas con 109 Calle 18</p>
             </div>
 
-            <article className="bg-mainWhite rounded-2xl shadow-md p-4 w-[472px] max-w-md m-8">
+            <article className="bg-mainWhite rounded-2xl shadow-md p-4 my-8">
               {/* Food Waste Saved */}
               <div className="flex items-center justify-between border-b border-gray-200 py-2">
                 <span className="flex items-center gap-2 text-black">
@@ -82,24 +75,23 @@ export const Restaurante = () => {
               <div className="flex items-center justify-between py-2">
                 <span className="text-black">Rating</span>
                 <span>
-                  <Rating value={4.9} />{" "}
+                  <Rating value={4.9} />
                 </span>
               </div>
             </article>
-            <div className="m-8 h-[561px] w-[472px]  p-4 max-w-md rounded-2xl flex items-center justify-center bg-amarillo">
-              <p className="font-medium">Map Soon</p>
+
+            <div className="w-full h-[250px] md:h-[450px] bg-amarillo md:mb-10 rounded-4xl text-center">
+              Map Coming soons
             </div>
-          </div>
-          {/* rigth info */}
-          <div>
-            <div className="w-[542px] my-9 mx-12 ">
-              <Input
-                type="search"
-                placeholder="Search for restaurants, dishes..."
-                name="search"
-              />
-            </div>
-            <div className=" w-[542px] mx-12 flex justify-between flex-wrap gap-2">
+          </aside>
+
+          <aside className="w-full px-6 md:px-0">
+            <Input
+              type="search"
+              name="search-food"
+              placeholder="Search by food names"
+            />
+            <div className=" mt-4 mb-10 flex flex-wrap gap-2">
               {checkboxOptions.map(({ id, label, img }) => (
                 <Checkbox
                   key={id}
@@ -111,7 +103,18 @@ export const Restaurante = () => {
                 />
               ))}
             </div>
-          </div>
+            <div className="py-6 grid grid-cols-1 lg:grid-cols-2 gap-y-12 md:gap-y-6 gap-x-6 md:gap-x-12 md:max-h-[700px] overflow-auto pr-2">
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+            </div>
+          </aside>
         </section>
       </main>
       <Footer />
