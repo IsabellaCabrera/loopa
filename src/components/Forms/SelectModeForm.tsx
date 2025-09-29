@@ -4,8 +4,8 @@ import { UserRole } from "../Cards/UserRole";
 import { useState } from "react";
 
 export const SelectModeForm = () => {
-  const [role, setRole] = useState("");
   const navigate = useNavigate();
+  const [role, setRole] = useState("");
 
   const handleSelectRole = () => {
     if (!role) return; // nada seleccionado
@@ -45,8 +45,8 @@ export const SelectModeForm = () => {
         />
       </div>
       <div className="flex items-center justify-between">
-        <Button secondary>Back</Button>
-        <Button disabled={!role}>Next</Button>
+        <Button secondary onClick={() => navigate("/")}>Back</Button>
+        <Button disabled={!role} onClick={() => navigate("/signup")}>Next</Button>
       </div>
     </form>
   );
