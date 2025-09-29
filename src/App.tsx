@@ -6,6 +6,8 @@ import { SignUpCustomer } from "./pages/SignupCustomer";
 import { SignUpSeller } from "./pages/SignupSeller";
 import { Restaurante } from "./pages/Restaurante";
 import { Pickup } from "./pages/Pickup";
+import { Home } from "./pages/Home";
+import { Checkout } from "./pages/Checkout";
 
 function App() {
   return (
@@ -30,9 +32,9 @@ function App() {
           {/* Customer es el usario que va comprar  */}
 
           <Route path="/signup/customer" element={<SignUpCustomer />} />
-          <Route path="/customer/home" />
+          <Route path="/customer/home" element={<Home />} />
           <Route path="/customer/:restaurant" element={<Restaurante />} />
-          <Route path="/customer/:order/checkout" />
+          <Route path="/customer/checkout" element={<Checkout />} />
           <Route path="/customer/:order/confirmation" />
           <Route path="/customer/:order/pickup" element={<Pickup />} />
           <Route path="/customer/history&savings" />
