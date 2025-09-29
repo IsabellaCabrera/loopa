@@ -1,8 +1,10 @@
 import { Link } from "react-router";
 import { Button } from "../Button";
 import { Input } from "../Input";
+import { useNavigate } from "react-router";
 
 export const RegisterCustomer = () => {
+  const navigate = useNavigate();
   return (
     <form className="flex flex-col gap-6 ">
       <Link to={"/"}> <img src="/PeraLogo-amarillo.svg" alt="Pera logo"/></Link>
@@ -28,7 +30,7 @@ export const RegisterCustomer = () => {
           Forgot password?
         </p>
       </div>
-      <Button>Log In</Button>
+      <Button onClick={() => navigate("/customer/home")}>Log In</Button>
       <p className="flex items-center gap-2">
         Don't have an account?
         <span className="text-morado underline">
