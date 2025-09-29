@@ -12,6 +12,7 @@ export const RestaurantNearYou = ({
 }: RestaurantNearYouCardProps) => {
 
   return (
+    //localhost:5173/customer/mcdonalds
     <Link to={`/customer/${restaurant}`}>
       <article className=" bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
         {/* Imagen */}

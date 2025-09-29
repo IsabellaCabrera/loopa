@@ -12,17 +12,17 @@ const checkboxOptions = [
   {
     id: crypto.randomUUID(),
     label: "Fresh Food",
-    img: "/public/FreshFoodIcon.webp",
+    img: "/FreshFoodIcon.webp",
   },
   {
     id: crypto.randomUUID(),
     label: "Sales",
-    img: "/public/Sale.webp",
+    img: "/Sale.webp",
   },
   {
     id: crypto.randomUUID(),
     label: "Cupons",
-    img: "/public/Cupons.webp",
+    img: "/Cupons.webp",
   },
 ];
 

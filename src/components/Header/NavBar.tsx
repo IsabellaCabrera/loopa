@@ -9,6 +9,8 @@ export const NavBar = () => {
   const location = useLocation();
 
    useEffect(() => {
+    //localhost:5173/
+    //localhost:5173/customer
     if (location.pathname === "/") {
       setPage("landing");
     } else {
