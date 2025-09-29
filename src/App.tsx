@@ -4,6 +4,7 @@ import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
+import { Settings } from './pages/Settings';
 import { Checkout } from './pages/Checkout';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           <Route path="/customer/:order/confirmation" />
           <Route path="/customer/:order/pickup" />
           <Route path="/customer/history&savings" />
-          <Route path="/customer/settings" />
+          <Route path="/customer/settings" element={<Settings />} />
         </Routes>
         <Footer />
       </Router>
