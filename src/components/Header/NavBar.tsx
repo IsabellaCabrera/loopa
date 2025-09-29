@@ -1,10 +1,21 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { LandingNavMenu } from "./LandingNavMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UserNavMenu } from "./UserNavMenu";
 
 export const NavBar = () => {
-  const [page] = useState<"landing" | "user">("user"); // le digo al useState que solo puede ser de dos tipos landing o user
+  const [page, setPage] = useState<"landing" | "user">("landing"); // le digo al useState que solo puede ser de dos tipos landing o user
+
+  const location = useLocation();
+
+   useEffect(() => {
+    if (location.pathname === "/") {
+      setPage("landing");
+    } else {
+      setPage("user");
+    }
+  }, [location.pathname]);
+
   return (
     <header className="flex items-center justify-between px-10 py-3 bg-mainWhite rounded-b-3xl border-b border-blue">
       <Link to={"/"}>

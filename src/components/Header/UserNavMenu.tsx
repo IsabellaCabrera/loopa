@@ -5,18 +5,18 @@ import { NavItems } from "./NavItems";
 const customerNavItems = [
   {
     id: crypto.randomUUID(),
-    link: "user/",
+    link: "customer/home",
     label: "Home",
   },
   {
     id: crypto.randomUUID(),
-    link: "user/otherlink2",
-    label: "Ohter Link 2",
+    link: "customer/history&savings",
+    label: "history & savings",
   },
   {
     id: crypto.randomUUID(),
-    link: "user/otherlink3",
-    label: "Ohter Link 3",
+    link: "customer/checkout",
+    label: "Cart",
   },
 ];
 
